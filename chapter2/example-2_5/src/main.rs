@@ -6,6 +6,8 @@
 
 
 use std::convert::TryInto; // try_into() 메서드가 구현된 u16과 같은 타입에 해당 메서드를 쓸 수 있도록 함.
+// TryInto는 trait 타입. trait는 매서드 집합이라고 할 수도 있음.
+// 일반적인 연산 작업(=, +, -, /, * ...)은 암묵적인 prelude로 가져오므로 명시적 가져오기(import, rust에서는 use)는 없어도 됨.
 
 fn main() {
     let a: i32 = 10;

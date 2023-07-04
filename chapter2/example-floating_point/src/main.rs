@@ -14,8 +14,8 @@ fn main() {
     println!(" 0.3: {:x}", (xyz.2).to_bits());
     println!();
 
-    assert!(abc.0 + abc.1 == abc.2);
-    //assert!(xyz.0 + xyz.1 == xyz.2);
+    assert!(abc.0 + abc.1 == abc.2); // 정상적으로 수행된다.
+    assert!(xyz.0 + xyz.1 == xyz.2); // 충돌이 발생한다.
     
     let result: f32 = 0.1 + 0.1;
     let desired: f32 = 0.2;
@@ -26,5 +26,5 @@ fn main() {
     //assert_eq!(x, x);
 
     let x: f32 = 1.0 / 0.0;
-    assert!(x.is_finite()); 
+    assert!(x.is_finite()); // 방어적 프로그래밍
 }

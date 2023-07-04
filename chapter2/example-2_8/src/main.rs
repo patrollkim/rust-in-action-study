@@ -8,7 +8,7 @@
 */
 
 fn main() {
-    // let needle = 42;
+    let needle = 42; // 사용하지 않으므로 불필요한 변수
     let haystack = [1, 1, 2, 5, 14, 42, 132, 429, 1430, 4862];
 
     for item in &haystack {

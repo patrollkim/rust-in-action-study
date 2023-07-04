@@ -38,7 +38,7 @@ fn main() {
 fn process_lines<T: BufRead + Sized>(reader: T, re: Regex) {
     for line_ in reader.lines() {
         let line = line_.unwrap();
-        match re.find(&line) {
+        match re.find(&line) { // line은 String 타입이다. 그러나 re.find()는 &str을 인자로 받는다.
             Some(_) => println!("{}", line),
             None => (),
         }
