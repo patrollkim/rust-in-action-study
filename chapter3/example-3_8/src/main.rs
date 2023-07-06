@@ -36,7 +36,7 @@ impl File {
 }
 
 fn open(f: File) -> Result<File, String> {
-    if one_in(5) { // 파라미터 숫자 번에 1번 꼴로 오류를 반환한다.
+    if one_in(5) { // 파라미터 숫자에 1번 꼴로 오류를 반환한다.
         let err_msg = String::from("Permission denied");
         return Err(err_msg);
     }
@@ -44,7 +44,7 @@ fn open(f: File) -> Result<File, String> {
 }
 
 fn close(f: File) -> Result<File, String> {
-    if one_in(5) {
+    if one_in(5) { // 파라미터 숫자에 1번 꼴로 오류를 반환한다.
         let err_msg = String::from("Interrupted by signal!");
         return Err(err_msg);
     }

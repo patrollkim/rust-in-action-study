@@ -40,7 +40,7 @@ fn main() {
     let mut buffer: Vec<u8> = vec![]; 
     
     f.read(&mut buffer);
-    unsafe { // 정적 가변 젼수에 접근해 이들 수정 하려면 unsafe 블록을 사용해야 한다.
+    unsafe { // 정적 가변 변수에 접근해 이들 수정 하려면 unsafe 블록을 사용해야 한다.
         if ERROR != 0 { // ERROR 값을 검사한다. 오류 검사는 0은 오류가 아니라는 관례를 따른다.
             panic!("An error has occurred while reading the file ")
         }
